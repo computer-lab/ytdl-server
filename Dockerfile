@@ -1,6 +1,5 @@
 # Dockerfile influenced by anothervictimofsurvivalinstinct/yt-dlp-server
-
-FROM ubuntu:20.04 AS base
+FROM alpine:3.16 AS base
 
 RUN apk add \
         build-base \
