@@ -57,12 +57,12 @@ ENV PATH="/root/.local/bin:$PATH"
 
 # Create User that program can run as and chown the working directory. Reduces the possibility of files being written as root:root
 
-ENV UNAME abc
-ENV UID 1000
-ENV GID 1000
-RUN groupadd -g $GID -o $UNAME
-RUN useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
-RUN chown -R abc:abc /app
+# ENV UNAME abc
+# ENV UID 1000
+# ENV GID 1000
+# RUN groupadd -g $GID -o $UNAME
+# RUN useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
+# RUN chown -R abc:abc /app
 
 # Environment variables
 
