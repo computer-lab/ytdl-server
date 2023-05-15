@@ -61,8 +61,8 @@ ENV PATH="/root/.local/bin:$PATH"
 ENV UNAME abc
 ENV UID 1000
 ENV GID 1000
-RUN groupadd -g $GID -o $UNAME
-RUN useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
+RUN addgroup -g $GID -S $UNAME
+RUN adduser -D -u $UID -g $GID -s /bin/bash $UNAME
 RUN chown -R abc:abc /app
 
 # Environment variables
